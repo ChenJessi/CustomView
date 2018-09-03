@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ssf.chen.customview.MainActivity">
+
+    <com.ssf.chen.customview.widget.SpeedometerView
+        android:id="@+id/speedometerView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        ></com.ssf.chen.customview.widget.SpeedometerView>
+
+    <com.ssf.chen.customview.widget.DragPointView
+        android:id="@+id/dragPointView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="2dp"
+        android:gravity="center"
+        android:text="10"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"/>
+</android.support.constraint.ConstraintLayout>
