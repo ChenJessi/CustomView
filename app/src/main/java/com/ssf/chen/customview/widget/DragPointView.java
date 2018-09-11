@@ -6,6 +6,7 @@ import android.animation.ValueAnimator.AnimatorUpdateListener;
 import android.animation.AnimatorSet;
 import android.animation.ValueAnimator;
 import android.annotation.SuppressLint;
+import android.app.ActionBar;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -26,6 +27,7 @@ import android.view.animation.LinearInterpolator;
 import android.view.animation.OvershootInterpolator;
 import android.view.ViewTreeObserver.OnPreDrawListener;
 import android.widget.AbsListView;
+import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
@@ -63,6 +65,7 @@ public class DragPointView extends android.support.v7.widget.AppCompatTextView {
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
         int w = getMeasuredWidth();
         int h = getMeasuredHeight();
@@ -70,7 +73,9 @@ public class DragPointView extends android.support.v7.widget.AppCompatTextView {
             int x = Math.max(w, h);
             setMeasuredDimension(x, x);
         }
+
     }
+
 
     @SuppressWarnings("deprecation")
     public void setBackgroundColor(int backgroundColor) {

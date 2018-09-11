@@ -7,19 +7,58 @@
     tools:context="com.ssf.chen.customview.MainActivity">
 
     <com.ssf.chen.customview.widget.RotateOvlView
+        android:id="@+id/rotateOvlView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
 
     <com.ssf.chen.customview.widget.DragPointView
         android:id="@+id/dragPointView"
-        android:layout_width="wrap_content"
+        android:layout_width="20dp"
         android:layout_height="wrap_content"
-        android:padding="2dp"
-        android:gravity="center"
+        android:background="@color/black"
         android:text="10"
+        android:gravity="center"
         android:textColor="#ffffff"
+        android:textSize="13sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginLeft="10dp"
-        android:layout_marginBottom="10dp"/>
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rotateOvlView"
+        android:visibility="gone"/>
+    <com.ssf.chen.customview.widget.SideBar
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColor="@color/colorAccent"
+        android:paddingRight="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"/>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <Button
+        android:id="@+id/btnSuccess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Success"/>
+    <Button
+        android:id="@+id/btnError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Error"/>
+    <Button
+        android:id="@+id/btnWarning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Warning"/>
+<Button
+        android:id="@+id/btnCustom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Custom"/>
+</LinearLayout>
 </android.support.constraint.ConstraintLayout>

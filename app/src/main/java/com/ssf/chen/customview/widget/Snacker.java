@@ -553,7 +553,7 @@ public class Snacker implements View.OnClickListener {
     }
 
 
-    public class RoundedImageView extends AppCompatImageView {
+    private class RoundedImageView extends AppCompatImageView {
 
         public RoundedImageView(Context context) {
             super(context);

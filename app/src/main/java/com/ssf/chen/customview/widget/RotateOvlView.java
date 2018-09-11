@@ -26,7 +26,7 @@ public class RotateOvlView extends View {
     private int width, height, radius;
     private int mSection = 200;
     private String[] weightNum;
-    private float  angle, newAngle, lastWeight;
+    private float  angle, newAngle, lastAngle,lastWeight;
     public static final float MAX_VALUE = 200.0f;
     private DecimalFormat df = new DecimalFormat("##");
     private OnWeightListener listener;
@@ -138,10 +138,16 @@ public class RotateOvlView extends View {
                 float moveY = event.getY();
                 cenPoint.set(width / 2,width / 2);
                 movePoint.set((int)moveX,(int)moveY);
-                newAngle = angle(cenPoint,downPoint,movePoint);
+                newAngle = lastAngle + angle(cenPoint,downPoint,movePoint);
                 if (newAngle >= 0) {
+                    if (newAngle > 360) {
+                        newAngle %= 360;
+                    }
                     lastWeight = MAX_VALUE * (1 - newAngle / 360.0f);
                 } else {
+                    if (Math.abs(newAngle) > 360) {
+                        newAngle %= 360;
+                    }
                     lastWeight = MAX_VALUE * (Math.abs(newAngle) / 360.0f);
                 }
 
@@ -149,6 +155,9 @@ public class RotateOvlView extends View {
                 if (listener != null) {
                     listener.onWeightSet(oriWeight, (int) lastWeight);
                 }
+                break;
+            case MotionEvent.ACTION_UP:
+                lastAngle = newAngle;
                 break;
         }
         return true;
