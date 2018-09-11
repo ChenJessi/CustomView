@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context="com.ssf.chen.customview.MainActivity">
 
-    <com.ssf.chen.customview.widget.WeightOvlView
+    <com.ssf.chen.customview.widget.RotateOvlView
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
