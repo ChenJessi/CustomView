@@ -6,11 +6,9 @@
     android:layout_height="match_parent"
     tools:context="com.ssf.chen.customview.MainActivity">
 
-    <com.ssf.chen.customview.widget.SpeedometerView
-        android:id="@+id/speedometerView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        ></com.ssf.chen.customview.widget.SpeedometerView>
+    <com.ssf.chen.customview.widget.WeightOvlView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
     <com.ssf.chen.customview.widget.DragPointView
         android:id="@+id/dragPointView"
