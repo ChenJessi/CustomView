@@ -4,4 +4,6 @@
 ## 可触摸旋转圆盘控件  
 ![可触摸旋转表盘](https://github.com/chen188669/CustomView/blob/master/images/rotateOvlView.gif "可触摸旋转表盘")  
 ## 仿QQ未读消息  
+<img src="https://github.com/chen188669/CustomView/blob/master/images/dragPointView.gif" width="448" height="960" alt="未读消息"/>  
+
 ![未读消息](https://github.com/chen188669/CustomView/blob/master/images/dragPointView.gif "未读消息")
