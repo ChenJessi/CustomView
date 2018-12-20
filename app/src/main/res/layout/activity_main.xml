@@ -4,15 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.ssf.chen.customview.MainActivity">
+    tools:context="com.chen.customview.MainActivity">
 
-    <com.ssf.chen.customview.widget.RotateOvlView
+    <com.chen.customview.widget.RotateOvlView
         android:id="@+id/rotateOvlView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:visibility="gone"/>
 
-    <com.ssf.chen.customview.widget.DragPointView
+    <com.chen.customview.widget.DragPointView
         android:id="@+id/dragPointView"
         android:layout_width="20dp"
         android:layout_height="wrap_content"
@@ -24,9 +24,10 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/rotateOvlView"
-        android:visibility="gone"/>
-    <com.ssf.chen.customview.widget.SideBar
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="invisible"/>
+    <com.chen.customview.widget.SideBar
+        android:id="@+id/sideBar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:textColor="@color/colorAccent"
@@ -37,9 +38,11 @@
         app:layout_constraintTop_toTopOf="parent"
         android:visibility="gone"/>
 <LinearLayout
+    android:id="@+id/llSnacker"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:visibility="gone">
     <Button
         android:id="@+id/btnSuccess"
         android:layout_width="wrap_content"
@@ -61,4 +64,58 @@
         android:layout_height="wrap_content"
         android:text="Custom"/>
 </LinearLayout>
+
+    <Button
+        android:id="@+id/btnReturn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="返回"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="40dp"/>
+
+    <LinearLayout
+        android:id="@+id/llCustom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="10dp">
+
+        <Button
+            android:id="@+id/btnDragPoint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="DragPoint"/>
+        <Button
+            android:id="@+id/btnRotateOvl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="RotateOvl"/>
+        <Button
+            android:id="@+id/btnSideBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="SideBar"/>
+        <Button
+            android:id="@+id/btnSnacker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="Snacker"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tvMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnReturn"
+        android:layout_marginBottom="10dp"
+        android:textSize="18sp"
+        tools:text="D"
+        android:visibility="gone"/>
 </android.support.constraint.ConstraintLayout>
