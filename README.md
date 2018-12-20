@@ -2,7 +2,7 @@
 一些自己用到的自定义View  持续更新中...  
 注：本项目为个人平时使用过的自定义控件整理  部分控件非原创或是根据开源修改(早期项目使用) 已找不到出处 侵删    
 ## [点击或扫码下载](https://github.com/chen188669/CustomView/blob/master/app/release/app-release.apk)  
-<img src="https://github.com/chen188669/CustomView/blob/master/images/download.png" width="400" height="400" alt="扫码下载"/>  
+<img src="https://github.com/chen188669/CustomView/blob/master/images/download.png" width="300" height="300" alt="扫码下载"/>    
 ## [可触摸旋转圆盘控件](https://github.com/chen188669/CustomView/blob/master/app/src/main/java/com/chen/customview/widget/RotateOvlView.java)  
 <img src="https://github.com/chen188669/CustomView/blob/master/images/rotateOvlView.gif" width="448" height="960" alt="可触摸旋转表盘"/>  
 
