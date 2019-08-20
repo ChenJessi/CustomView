@@ -2,15 +2,15 @@ package com.chen.customview.widget;
 
 import android.content.Context;
 import android.graphics.Canvas;
-import android.graphics.ImageFormat;
 import android.graphics.Paint;
 import android.graphics.Point;
 import android.graphics.Rect;
-import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
+
+import androidx.annotation.Nullable;
 
 import com.chen.customview.R;
 import com.chen.customview.util.DensityUtil;

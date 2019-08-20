@@ -2,11 +2,10 @@ package com.chen.customview.widget;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
-import android.animation.ValueAnimator.AnimatorUpdateListener;
 import android.animation.AnimatorSet;
 import android.animation.ValueAnimator;
+import android.animation.ValueAnimator.AnimatorUpdateListener;
 import android.annotation.SuppressLint;
-import android.app.ActionBar;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -15,21 +14,20 @@ import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.drawable.GradientDrawable;
 import android.graphics.drawable.StateListDrawable;
-import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.ViewTreeObserver;
+import android.view.ViewTreeObserver.OnPreDrawListener;
 import android.view.animation.LinearInterpolator;
 import android.view.animation.OvershootInterpolator;
-import android.view.ViewTreeObserver.OnPreDrawListener;
 import android.widget.AbsListView;
-import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
+
+import androidx.viewpager.widget.ViewPager;
 
 /**
  * Created by CHEN on 2018/8/30.
@@ -37,7 +35,7 @@ import android.widget.TextView;
  * 可拖拽
  */
 
-public class DragPointView extends android.support.v7.widget.AppCompatTextView {
+public class DragPointView extends TextView {
     private final String TAG = this.getClass().getSimpleName();
     private boolean initBgFlag;
     private OnDragListencer dragListencer;

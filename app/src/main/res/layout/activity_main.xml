@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.chen.customview.MainActivity">
+    tools:context=".MainActivity">
 
     <com.chen.customview.widget.RotateOvlView
+        app:layout_constraintTop_toTopOf="parent"
         android:id="@+id/rotateOvlView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -37,33 +38,33 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:visibility="gone"/>
-<LinearLayout
-    android:id="@+id/llSnacker"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:visibility="gone">
-    <Button
-        android:id="@+id/btnSuccess"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Success"/>
-    <Button
-        android:id="@+id/btnError"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Error"/>
-    <Button
-        android:id="@+id/btnWarning"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Warning"/>
-<Button
-        android:id="@+id/btnCustom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Custom"/>
-</LinearLayout>
+    <LinearLayout
+        android:id="@+id/llSnacker"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <Button
+            android:id="@+id/btnSuccess"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Success"/>
+        <Button
+            android:id="@+id/btnError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Error"/>
+        <Button
+            android:id="@+id/btnWarning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Warning"/>
+        <Button
+            android:id="@+id/btnCustom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Custom"/>
+    </LinearLayout>
 
     <Button
         android:id="@+id/btnReturn"
@@ -106,6 +107,13 @@
             android:layout_height="wrap_content"
             android:textAllCaps="false"
             android:text="Snacker"/>
+
+        <Button
+            android:id="@+id/btnSort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="Sort"/>
     </LinearLayout>
     <TextView
         android:id="@+id/tvMessage"
@@ -118,4 +126,5 @@
         android:textSize="18sp"
         tools:text="D"
         android:visibility="gone"/>
-</android.support.constraint.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

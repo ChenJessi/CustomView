@@ -1,25 +1,24 @@
 package com.chen.customview;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.graphics.Color;
-import android.nfc.Tag;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.chen.customview.view.SortActivity;
 import com.chen.customview.widget.DragPointView;
 import com.chen.customview.widget.RotateOvlView;
 import com.chen.customview.widget.SideBar;
 import com.chen.customview.widget.Snacker;
 
-
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private final String TAG = this.getClass().getSimpleName();
-    ;
     private Button btnReturn;
     private LinearLayout llCustom;          //自定义
 
@@ -33,6 +32,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btnRotateOvl;
     private Button btnSideBar;
     private Button btnSnacker;
+    private Button btnSort;
 
     private TextView tvMessage;
 
@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         btnReturn = findViewById(R.id.btnReturn);
         llCustom = findViewById(R.id.llCustom);
         llSnacker = findViewById(R.id.llSnacker);
@@ -50,11 +51,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnRotateOvl = findViewById(R.id.btnRotateOvl);
         btnSideBar = findViewById(R.id.btnSideBar);
         btnSnacker = findViewById(R.id.btnSnacker);
+        btnSort = findViewById(R.id.btnSort);
         tvMessage = findViewById(R.id.tvMessage);
         findViewById(R.id.btnSuccess).setOnClickListener(this);
         findViewById(R.id.btnError).setOnClickListener(this);
         findViewById(R.id.btnWarning).setOnClickListener(this);
         findViewById(R.id.btnCustom).setOnClickListener(this);
+
 
         btnReturn.setOnClickListener(this);
 
@@ -62,9 +65,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnRotateOvl.setOnClickListener(this);
         btnSideBar.setOnClickListener(this);
         btnSnacker.setOnClickListener(this);
+        btnSort.setOnClickListener(this);
 
         initListener();
     }
+
 
     /**
      * 初始化控件的方法
@@ -89,6 +94,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnRotateOvl.setVisibility(View.GONE);
         btnSideBar.setVisibility(View.GONE);
         btnSnacker.setVisibility(View.GONE);
+        btnSort.setVisibility(View.GONE);
     }
 
 
@@ -106,6 +112,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 btnRotateOvl.setVisibility(View.VISIBLE);
                 btnSideBar.setVisibility(View.VISIBLE);
                 btnSnacker.setVisibility(View.VISIBLE);
+                btnSort.setVisibility(View.VISIBLE);
                 break;
             case R.id.btnSuccess:       //Snacker
                 Snacker.with(this).setMessage("这是默认的Success!", Color.WHITE).sneakSuccess();
@@ -135,6 +142,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btnSnacker:         //Snacker
                 btnVisibility();
                 llSnacker.setVisibility(View.VISIBLE);
+                break;
+            case R.id.btnSort:         //sort
+                startActivity(new Intent(MainActivity.this, SortActivity.class));
                 break;
         }
     }

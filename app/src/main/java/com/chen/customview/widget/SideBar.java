@@ -16,6 +16,7 @@ import com.chen.customview.R;
  * 联系人列表
  * 字母
  */
+
 public class SideBar extends TextView {
     private String[] letters = new String[]{"↑","★","A", "B", "C", "D", "E", "F", "G", "H", "I",
             "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V",
@@ -48,6 +49,14 @@ public class SideBar extends TextView {
      * 缩放个数item，即开口大小
      */
     private int scaleItemCount = 6;
+    /**
+     * 文本颜色
+     */
+    private int textColor = 0XFF828282;
+    /**
+     * 文字大小
+      */
+    private int textSize = 30;
     private ISideBarSelectCallBack callBack;
 
     public SideBar(Context context) {
@@ -72,14 +81,20 @@ public class SideBar extends TextView {
             ta.recycle();
         }
         textPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+        textPaint.setColor(textColor);
+        textPaint.setTextSize(textSize);
         textPaint.setColor(getCurrentTextColor());
         textPaint.setTextSize(getTextSize());
         textPaint.setTextAlign(Paint.Align.CENTER);
         bigTextPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+        bigTextPaint.setColor(textColor);
+        bigTextPaint.setTextSize(textSize * (scaleSize + 3));
         bigTextPaint.setColor(getCurrentTextColor());
         bigTextPaint.setTextSize(getTextSize() * (scaleSize + 3));
         bigTextPaint.setTextAlign(Paint.Align.CENTER);
         scaleTextPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+        scaleTextPaint.setColor(textColor);
+        scaleTextPaint.setTextSize(textSize * (scaleSize + 1));
         scaleTextPaint.setColor(getCurrentTextColor());
         scaleTextPaint.setTextSize(getTextSize() * (scaleSize + 1));
         scaleTextPaint.setTextAlign(Paint.Align.CENTER);
@@ -201,6 +216,7 @@ public class SideBar extends TextView {
                 float delta = 1 - Math.abs((y - currentItemToDrawY) / (centerItemToDrawY - currentItemToDrawY));
                 float maxRightX = w - getPaddingRight();
                 //如果大于0，表明在y坐标上方
+                scaleTextPaint.setTextSize(textSize + textSize * delta);
                 scaleTextPaint.setTextSize(getTextSize() + getTextSize() * delta);
                 float drawX = maxRightX - scaleWidth * delta;
                 //超出边界直接花在边界上
