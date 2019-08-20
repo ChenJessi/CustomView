@@ -14,9 +14,13 @@
 <img src="https://github.com/chen188669/CustomView/blob/master/images/SideBar.gif" width="300" height="640" alt="列表首字母索引"/>  
 
 ## [顶部弹出snackbar](https://github.com/chen188669/CustomView/blob/master/app/src/main/java/com/chen/customview/widget/Snacker.java)  
-<img src="https://github.com/chen188669/CustomView/blob/master/images/Snacker.gif" width="300" height="640" alt="顶部snackbar"/>    
+<img src="https://github.com/chen188669/CustomView/blob/master/images/Snacker.gif" width="300" height="640" alt="顶部snackbar"/>   
+
+## [首字母排序索引](https://github.com/chen188669/CustomView/blob/master/app/src/main/java/com/chen/customview/view/SortActivity.java)  
+<img src="https://github.com/chen188669/CustomView/blob/master/images/a3afa10f3443ffe916e7e6945e2b8a1.png" width="300" height="640" alt="首字母排序索引"/> 
 
 
+---------------------------------------------------------------------------------------------------------------------  
 
 **2019-08-20 更新**
 
